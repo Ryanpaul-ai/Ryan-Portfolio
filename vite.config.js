@@ -10,6 +10,11 @@ export default defineConfig({
 },
    build: {
     chunkSizeWarningLimit: 1600
-   }
-
+   },
+build: {
+    target: 'esnext'
+  },
+  ssr: {
+    noExternal: ['three', '@react-three/fiber', '@react-three/drei']
+  }
 })
